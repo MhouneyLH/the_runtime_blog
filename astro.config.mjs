@@ -4,10 +4,12 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	base: "/",
+	site: "https://blog.lucas-huenniger.dev/",
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'The Runtime',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/MhouneyLH/the_runtime_blog' }],
 			sidebar: [
 				{
 					label: 'Guides',
