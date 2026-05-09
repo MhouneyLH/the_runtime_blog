@@ -12,6 +12,7 @@ export default defineConfig({
       customCss: ["./src/styles/custom.css"],
       social: [
         { icon: "github", label: "GitHub", href: "https://github.com/MhouneyLH/the_runtime_blog" },
+        { icon: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/lucas-huenniger" },
       ],
       sidebar: [
         {
@@ -19,6 +20,10 @@ export default defineConfig({
           items: [{ label: "Example Blog Post", slug: "blog_posts/example" }],
         },
       ],
+      components: {
+        ThemeProvider: './src/components/ThemeProvider.astro',
+        ThemeSelect: './src/components/ThemeSelect.astro',
+      },
     }),
   ],
 });
