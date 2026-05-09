@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  color-scheme: dark;
+  --sl-font: "Space Mono", Consolas, "Liberation Mono", "Courier New", monospace;
+  --sl-font-mono: "Space Mono", Consolas, "Liberation Mono", "Courier New", monospace;
+  --sl-color-accent: #2cb16a;
+  --sl-color-accent-low: #153625;
+  --sl-color-accent-high: #82e5b2;
+  --sl-color-bg: #050b12;
+  --sl-color-bg-nav: #060e17;
+  --sl-color-bg-sidebar: #060e17;
+  --sl-color-text: #e6f6ee;
+  --sl-color-text-muted: #a7c7b6;
+  --sl-color-border: #1a2a2f;
+}
+
+body {
+  background: var(--sl-color-bg);
+}
+
+.blog-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 0 0 2rem;
+}
+
+.blog-hero-text {
+  max-width: 42rem;
+}
+
+.blog-profile-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-mask-image: radial-gradient(circle, black 40%, transparent 95%);
+  mask-image: radial-gradient(circle, black 40%, transparent 95%);
+}
+
+.hero {
+  padding-bottom: 2.5rem;
+}
+
+.hero > img {
+  width: clamp(240px, 36vw, 320px);
+  height: clamp(240px, 36vw, 320px);
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-mask-image: radial-gradient(circle, black 30%, transparent 75%);
+  mask-image: radial-gradient(circle, black 30%, transparent 75%);
+}
+
+.pinned-section {
+  margin: 2rem 0 1.5rem;
+}
+
+.pinned-section starlight-file-tree {
+  font-size: var(--sl-text-m);
+}
+
+.pinned-empty {
+  margin: 0.8rem 0 0;
+  color: var(--sl-color-text-muted);
+}
+
+.right-sidebar {
+  margin-right: -18px;
+  background: var(--sl-color-bg-sidebar);
+}
+
+.right-sidebar .sl-toc,
+.sl-toc {
+  background: var(--sl-color-bg-sidebar);
+  border: 1px solid var(--sl-color-border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+
+.sl-markdown-content code,
+.sl-markdown-content pre {
+  font-family: var(--sl-font-mono);
+}

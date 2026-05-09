@@ -1,0 +1,55 @@
+---
+import { stat } from "node:fs/promises";
+import { FileTree } from "@astrojs/starlight/components";
+import { getCollection } from "astro:content";
+
+const entries = (await getCollection("docs")).filter((entry) => entry.id !== "index");
+const pinnedEntries = entries.filter(
+  (entry) => (entry.data as { pinned?: boolean }).pinned === true,
+);
+
+const pinnedEntriesWithDates = await Promise.all(
+  pinnedEntries.map(async (entry) => {
+    if (!entry.filePath) {
+      return { entry, comment: null };
+    }
+    const stats = await stat(entry.filePath);
+    const createdAt = stats.birthtimeMs || stats.mtimeMs;
+    const formattedDate = new Date(createdAt).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    });
+    return { entry, comment: formattedDate };
+  }),
+);
+---
+
+<section class="pinned-section">
+  {
+    pinnedEntries.length > 0 ? (
+      <FileTree>
+        <ul>
+          <li>
+            src/
+            <ul>
+              <li>
+                pinned/
+                <ul>
+                  {pinnedEntriesWithDates.map(({ entry, comment }) => (
+                    <li>
+                      <a href={`/${entry.id}/`}>{entry.data.title}</a>
+                      {comment && <> {comment}</>}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </FileTree>
+    ) : (
+      <p class="pinned-empty">No pinned articles yet.</p>
+    )
+  }
+</section>
