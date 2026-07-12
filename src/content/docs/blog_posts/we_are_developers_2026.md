@@ -34,7 +34,7 @@ I ended up collecting way more than 150 stickers for family, friends and myself,
 
 I even got a nice RedHat hat, which I should bring to the next [Chemnitzer Linux Days](https://chemnitzer.linux-tage.de/).
 
-![RedHat hat and a Bisasam plushie, part of the swag haul](../../../assets/blog/redhat_bisasam.jpeg)
+![RedHat hat and a Chelast plushie, part of the swag haul](../../../assets/blog/redhat_chelast.jpeg)
 
 Focus-wise, the day leaned hard into devops, infrastructure and cloud native topics for me, with a bit of .NET mixed in.
 
