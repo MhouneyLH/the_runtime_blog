@@ -53,12 +53,29 @@ body {
   mask-image: radial-gradient(circle, black 30%, transparent 75%);
 }
 
+body:has(.pinned-section) {
+  --sl-content-width: 80rem;
+}
+
 .pinned-section {
   margin: 2rem 0 1.5rem;
 }
 
 .pinned-section starlight-file-tree {
   font-size: var(--sl-text-m);
+  width: 100%;
+}
+
+.pinned-section .tree-entry {
+  flex-wrap: nowrap;
+  max-width: 100%;
+  align-items: center;
+}
+
+.pinned-section .comment {
+  max-width: none;
+  min-width: 0;
+  flex: 1 1 0%;
 }
 
 .pinned-empty {
@@ -77,6 +94,21 @@ body {
   border: 1px solid var(--sl-color-border);
   border-radius: 10px;
   padding: 0.9rem 1rem;
+}
+
+[data-has-sidebar][data-has-toc] {
+  --sl-content-width: 60rem;
+}
+
+.right-sidebar-panel .sl-container {
+  width: 100%;
+  max-width: none;
+}
+
+@media (min-width: 72rem) {
+  [data-has-sidebar][data-has-toc] .main-pane {
+    --sl-content-margin-inline: auto;
+  }
 }
 
 .sl-markdown-content code,
