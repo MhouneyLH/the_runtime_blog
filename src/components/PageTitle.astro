@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import { getReadingTime } from "../utils/reading-time";
+
+const PAGE_TITLE_ID = "_top";
+const { entry } = Astro.locals.starlightRoute;
+const cover = (entry.data as { cover?: ImageMetadata }).cover;
+const readingTime = getReadingTime(entry.body);
+---
+
+<h1 id={PAGE_TITLE_ID}>{entry.data.title}</h1>
+
+<p class="reading-time">{readingTime} min read</p>
+
+{
+  cover && (
+    <Image src={cover} alt="" class="page-cover" width={1200} height={630} />
+  )
+}
+
+<style>
+  @layer starlight.core {
+    h1 {
+      margin-top: 1rem;
+      font-size: var(--sl-text-h1);
+      line-height: var(--sl-line-height-headings);
+      font-weight: 600;
+      color: var(--sl-color-white);
+    }
+  }
+
+  .reading-time {
+    margin: 0.25rem 0 0;
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-text-muted);
+  }
+
+  .page-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 24rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin: 1rem 0 1.5rem;
+  }
+</style>

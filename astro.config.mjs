@@ -17,12 +17,13 @@ export default defineConfig({
       sidebar: [
         {
           label: "Blog Posts",
-          items: [{ label: "Example Blog Post", slug: "blog_posts/example" }],
+          items: [{ label: "WeAreDevelopers Berlin 2026", slug: "blog_posts/we_are_developers_2026" }],
         },
       ],
       components: {
         ThemeProvider: './src/components/ThemeProvider.astro',
         ThemeSelect: './src/components/ThemeSelect.astro',
+        PageTitle: './src/components/PageTitle.astro',
       },
     }),
   ],
