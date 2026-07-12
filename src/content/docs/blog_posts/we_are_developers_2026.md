@@ -1,22 +1,24 @@
 ---
 title: "WeAreDevelopers Berlin 2026: What I Actually Learned & Experienced Between Collecting Stickers"
-description: A personal recap of the WeAreDevelopers congress in Berlin 2026, from a slow first day to talks on identity-based networking, JSON Structure and phishing-resistant MFA shown in a live demo.
+description: A personal recap of the WeAreDevelopers congress in Berlin 2026, from a slow first day to talks on identity-based networking, JSON Structure, phishing-resistant MFA and observability.
 pinned: true
-tags: ["conference", "devops", "security", "cloud-native", ".net"]
+tags:
+  ["conference", "devops", "security", "cloud-native", ".net", "observability", "wearedevelopers"]
 date: 2026-07-12
+cover: ../../../assets/blog/wad.jpeg
 ---
 
 During last week, I attended the WeAreDevelopers congress in Berlin. With so many parallel tracks, topics and speakers, I want to unpack what actually happened & the highlights, from my point of view. I am going to get you through the three days and ending with some of my personal takeaways.
 
 ## Day 0
 
-The first day was mainly a warm-up day: Badge pickup. A workshop about a geo-location pipeline which more felt like an extended advertisement. A meetup in the evening. No company booths were open yet. The congress itself really started the next day.
+The first day was mainly a warm-up day: Badge pickup. A workshop about a geo-location pipeline which more felt like an extended advertisement. A meetup in the evening. No company booths were open yet. The congress itself really started the next day. At this point, to be honest, I was a bit worried if the whole congress would be worth the money.
 
 A cool highlight on that day was the badge pickup itself. It was possible to do this at the [Computerspielmuseum Berlin](https://www.computerspielemuseum.de/) and with the badge came a reduced entry ticket. If you've never been there, it is probably worth a visit!
 
-The rest of day zero was underwhelming. for a specific API or tool. Seats were limited and that limit was strictly enforced, so we spent most of the day exploring the city instead.
+![Arcade cabinets inside the Computerspielmuseum Berlin](../../../assets/blog/museum.jpeg)
 
-The evening meetup I mentioned, redeemed itself with a meetup called "Hot Takes, Cold Beers: How to Evolve High-Scale Backend Systems Without Breaking Production" hosted by [GetYourGuide](https://www.getyourguide.com/de-de/). Both talks were about architectural solutions and followed a structure close to an architecture decision record: context, problem statement, solution design, consequences, rollout and measurement, and a closing summary.
+The evening meetup I mentioned was called "Hot Takes, Cold Beers: How to Evolve High-Scale Backend Systems Without Breaking Production" hosted by [GetYourGuide](https://www.getyourguide.com/de-de/). Both talks were about architectural solutions and followed a structure close to an architecture decision record: context, problem statement, solution design, consequences, rollout and measurement, and a closing summary.
 
 The 1st presentation showed how splitting a bloated endpoint and moving denormalization into application code cut response times fourfold and database costs thirtyfold, saving about 70,000 euros a month. The second one walked through untangling two services that both owned the same data, fixed by naming one clear source of truth and migrating gradually over two quarters instead of a big-bang rewrite.
 
@@ -26,7 +28,13 @@ After that we called it a day and went back to the hotel since the next day was 
 
 This is where the congress really kicked off. Now we had time for the actual talks.
 
-I ended up collecting way more than 150 stickers for family, friends and myself, plus a bunch of other goodies along the way. My personal favorite: a "Talk OTLP to me!" sticker.
+I ended up collecting way more than 150 stickers for family, friends and myself, plus a bunch of other goodies along the way. My personal favorite is a "Talk OTLP to me!" sticker.
+
+![Talk OTLP to me sticker from dash0](../../../assets/blog/otlp.png)
+
+I even got a nice RedHat hat, which I should bring to the next [Chemnitzer Linux Days](https://chemnitzer.linux-tage.de/).
+
+![RedHat hat and a Bisasam plushie, part of the swag haul](../../../assets/blog/redhat_bisasam.jpeg)
 
 Focus-wise, the day leaned hard into devops, infrastructure and cloud native topics for me, with a bit of .NET mixed in.
 

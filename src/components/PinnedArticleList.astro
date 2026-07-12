@@ -1,6 +1,5 @@
 ---
 import { stat } from "node:fs/promises";
-import { Image } from "astro:assets";
 import { FileTree } from "@astrojs/starlight/components";
 import { getCollection } from "astro:content";
 import { getReadingTime } from "../utils/reading-time";
@@ -51,15 +50,6 @@ const readingTimes = new Map(
                 <ul>
                   {pinnedEntriesWithDates.map(({ entry, comment }) => (
                     <li>
-                      {entry.data.cover && (
-                        <Image
-                          src={entry.data.cover}
-                          alt=""
-                          width={48}
-                          height={48}
-                          class="entry-thumb"
-                        />
-                      )}
                       <a href={`/${entry.id}/`}>{entry.data.title}</a>
                       {comment && <> {comment}</>}
                       {" "}· {readingTimes.get(entry.id)} min read
@@ -101,12 +91,4 @@ const readingTimes = new Map(
     color: var(--sl-color-gray-2);
   }
 
-  .entry-thumb {
-    width: 2rem;
-    height: 2rem;
-    object-fit: cover;
-    border-radius: 0.375rem;
-    margin-inline-end: 0.5rem;
-    flex-shrink: 0;
-  }
 </style>

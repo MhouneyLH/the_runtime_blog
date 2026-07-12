@@ -115,3 +115,18 @@ body:has(.pinned-section) {
 .sl-markdown-content pre {
   font-family: var(--sl-font-mono);
 }
+
+.sl-markdown-content :is(img):not(.page-cover) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 26rem);
+  max-height: 26rem;
+  margin: 1.5rem auto;
+  border-radius: 0.5rem;
+}
+
+.sl-markdown-content img[alt*="OTLP"] {
+  max-width: min(100%, 12rem);
+  max-height: 12rem;
+}
