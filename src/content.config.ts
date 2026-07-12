@@ -7,9 +7,13 @@ export const collections = {
   docs: defineCollection({
     loader: docsLoader(),
     schema: docsSchema({
-      extend: z.object({
-        pinned: z.boolean().optional(),
-      }),
+      extend: ({ image }) =>
+        z.object({
+          pinned: z.boolean().optional(),
+          tags: z.array(z.string()).optional(),
+          date: z.coerce.date().optional(),
+          cover: image().optional(),
+        }),
     }),
   }),
 };
