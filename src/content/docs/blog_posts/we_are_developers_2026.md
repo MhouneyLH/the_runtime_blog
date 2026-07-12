@@ -81,3 +81,5 @@ The focus on infrastructure and cloud native technologies paid off, and the rang
 My biggest takeaway of the congress is that it does not matter if you know nothing about a booth's topic. Just start a conversation, join a panel, ask a question during someone's presentation. That is what keeps a congress like this alive. And the best part is watching people talk about what they are passionate about and demystify it for everyone else in the room.
 
 Maybe we will see each other at the next WeAreDevelopers congress in Berlin 2027! :)
+
+![Selfie in front of congress location](../../../assets/blog/selfie_with_hemi.jpg)
